@@ -10,8 +10,9 @@ And you are cordially invited to my observation book that documents my journey.
 ### Professional Life
 I am a grad in Computer Science from VIT University and I currently work for <a href=''>ExxonMobil</a> EMIT<br>
 
-# Deadly Designs
-## About Deadly Designs
+# Articles
+## Deadly Designs
+### About The Series
 In a bid to organize my code more I landed on to design principles and structural patterns. I talk about these in my Medium Articles which I have linked down below:
 
 ### Part-1 <br>
