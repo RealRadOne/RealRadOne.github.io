@@ -26,29 +26,31 @@ In a bid to organize my code more I landed on to design principles and structura
 ### Part-5 <br>
 - [Bugging Builders](https://medium.com/@sakshisinha.2016/deadly-designs-d02e04c20300)
 
-#Links From The Internet
+# Links From The Internet
 
 ## Data Structures
-### Gathering content about the hottest topic from the Internet
+### Data Structure Resources<br>
 - [Dynamic Programming Patterns](https://leetcode.com/discuss/general-discussion/458695/dynamic-programming-patterns)
 - [How plagiarized is your code?](https://www.codequiry.com/)
 - [A complete resource of everything](https://docs.google.com/document/d/1VNoEUzBtyCw0fDw0X_bvuhmCwz1qhNjETPJc5VRZqm8/edit#)
 ## Interview Prep
-### All I've learnt about Interviews
+### Interview Prep Resource<br>
 - [6 mistakes not to make on the resume](https://www.cnbc.com/2019/04/22/want-to-be-irresistible-to-hiring-managers-avoid-these-6-resume-mistakes-at-all-costs.html)
 - [How to Ace Coding Interviews](https://medium.com/better-programming/how-to-ace-the-coding-interview-by-an-ex-facebook-interviewer-9c163a845d05)
 ## System Design
-### WIP
+### System Design Resources
+- [WIP]
 ## DevOps
-### All the best stuff about DevOps
+### About CICD tools and Automation
 - [About Jenkins](https://www.youtube.com/playlist?list=PLCRqvOk_BGhVi_mT_urqoJqcndJkf2lDS)
-## Bash Scripting
+### Bash Scripting
 ### WIP
-## Scripting w/PowerShell
-### The Windows CounterPart Of Bash.
+### Scripting w/PowerShell
+The Windows CounterPart Of Bash.
 - [Why I hate Powershell?](https://www.educba.com/powershell-vs-cmd/)
 ## CyberSecurity
-### Inspired By Mr Robot
+### More About Computers
+Inspired By Mr Robot
 - [RainBow Tables-How they work?](http://kestas.kuliukas.com/RainbowTables/)
 - [About Salting And Peppering](https://blogs.quickheal.com/password-security-a-dash-of-salt-and-little-of-hash-to-go-please/)
 - [How does SHA-256 work](https://www.youtube.com/watch?v=mbekM2ErHfM)
