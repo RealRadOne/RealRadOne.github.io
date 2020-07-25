@@ -42,6 +42,23 @@ In a bid to organize my code more I landed on to design principles and structura
 - [WIP]
 ## DevOps
 ### About CICD tools and Automation
+#### Docker
+#### Installation
+#### On Windows
+- [Note:Ubuntu WSL is not sufficient to run docker.<br>Shall not be considered a substitute.]
+- For Windows Home:
+- After Installing docker
+- Edit Windows Version in Registry<br>
+- 1. Press Windows + R and write regedit<br>
+- 2.In the Registry Editor, go to \HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion<br>
+- 3.Right-click on EditionID and Click Modify<br>
+- 4.Change Value Data to "Professional"<br>
+- Press OK.<br>
+- Install Docker<br>
+- After the installation, you can change the EditionID back to "Core"
+#### On Ubuntu
+- Follow the official documentation
+#### About CI/CD tools
 - [About Jenkins](https://www.youtube.com/playlist?list=PLCRqvOk_BGhVi_mT_urqoJqcndJkf2lDS)
 ### Bash Scripting
 ### WIP
