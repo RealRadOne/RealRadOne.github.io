@@ -42,9 +42,9 @@ In a bid to organize my code more I landed on to design principles and structura
 - [WIP]
 ## DevOps
 ### About CICD tools and Automation
-#### Docker
-#### Installation
-#### On Windows
+### Docker
+### Installation
+### On Windows
 - [Note:Ubuntu WSL is not sufficient to run docker.<br>Shall not be considered a substitute.]
 - For Windows Home:
 - After Installing docker
@@ -56,12 +56,12 @@ In a bid to organize my code more I landed on to design principles and structura
 - Press OK.<br>
 - Install Docker<br>
 - After the installation, you can change the EditionID back to "Core"
-#### On Ubuntu
+### On Ubuntu
 - Follow the official documentation
-#### About CI/CD tools
+### About CI/CD tools
 - [About Jenkins](https://www.youtube.com/playlist?list=PLCRqvOk_BGhVi_mT_urqoJqcndJkf2lDS)
 ### Bash Scripting
-### WIP
+- [WIP](#)
 ### Scripting w/PowerShell
 The Windows CounterPart Of Bash.
 - [Why I hate Powershell?](https://www.educba.com/powershell-vs-cmd/)
