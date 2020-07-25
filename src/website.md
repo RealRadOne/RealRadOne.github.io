@@ -41,11 +41,10 @@ In a bid to organize my code more I landed on to design principles and structura
 ### System Design Resources
 - [WIP]
 ## DevOps
-### About CICD tools and Automation
 ### Docker
-### Installation
-### On Windows
-- [Note:Ubuntu WSL is not sufficient to run docker.<br>Shall not be considered a substitute.]
+#### Installation
+##### On Windows
+- [Note:Ubuntu WSL is not sufficient to run docker.Shall not be considered a substitute.]
 - For Windows Home:
 - After Installing docker
 - Edit Windows Version in Registry<br>
@@ -56,7 +55,7 @@ In a bid to organize my code more I landed on to design principles and structura
 - Press OK.<br>
 - Install Docker<br>
 - After the installation, you can change the EditionID back to "Core"
-### On Ubuntu
+##### On Ubuntu
 - Follow the official documentation
 ### About CI/CD tools
 - [About Jenkins](https://www.youtube.com/playlist?list=PLCRqvOk_BGhVi_mT_urqoJqcndJkf2lDS)
