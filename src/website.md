@@ -45,19 +45,19 @@ In a bid to organize my code more I landed on to design principles and structura
 #### Installation
 ##### On Windows
 - Note: I would never recommend trying this on windows.
-- You might doubt your existence,feel like pulling all the hair from your head.Yes,Windows sucks!
+- You might doubt your existence and feel like pulling all the hair from your head.Yes,Windows sucks!
 - [Note:Ubuntu WSL is not sufficient to run docker.Shall not be considered a substitute.]
 - For Windows Home:
--- As Docker is only avaiable for Windows enterprise edition
--- After Installing docker
--- Edit Windows Version in Registry<br>
--- Press Windows + R and write regedit<br>
--- In the Registry Editor, go to \HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion<br>
--- Right-click on EditionID and Click Modify<br>
--- Change Value Data to "Professional"<br>
--- Press OK
--- Install Docker Desktop
--- After the installation, you can change the EditionID back to "Core"
+-1 : As Docker is only available for Windows enterprise edition
+-2 : After Installing docker
+-3 : Edit Windows Version in Registry<br>
+-4 : Press Windows + R and write regedit<br>
+-5 : In the Registry Editor, go to \HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion<br>
+-6 : Right-click on EditionID and Click Modify<br>
+-7 : Change Value Data to "Professional"<br>
+-8 : Press OK
+- Install Docker Desktop
+- After the installation, you can change the EditionID back to "Core"
 - After this install docker toolbox
 - Ensure that nothing like Hyper-V or Windows Virtualization platform is Running
 - [Check this thread](https://github.com/docker/toolbox/issues/745)
