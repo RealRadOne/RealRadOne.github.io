@@ -42,12 +42,11 @@ In a bid to organize my code more I landed on to design principles and structura
 - [WIP]
 ## DevOps
 ### Docker
-#### Installation
-##### On Windows
-- Note: I would never recommend trying this on windows.
-- You might doubt your existence and feel like pulling all the hair from your head.Yes,Windows sucks!
-- [Note:Ubuntu WSL is not sufficient to run docker.Shall not be considered a substitute.]
-- For Windows Home:
+### Installation
+### On Windows
+Note: I would never recommend trying docker on windows.You might doubt your existence and feel like pulling all the hair from your head.<br>
+Note:Ubuntu WSL is not sufficient to run docker.Shall not be considered a substitute.
+### For Windows Home:
 -1 : As Docker is only available for Windows enterprise edition
 -2 : After Installing docker
 -3 : Edit Windows Version in Registry<br>
@@ -60,8 +59,8 @@ In a bid to organize my code more I landed on to design principles and structura
 - After the installation, you can change the EditionID back to "Core"
 - After this install docker toolbox
 - Ensure that nothing like Hyper-V or Windows Virtualization platform is Running
-- [Check this thread](https://github.com/docker/toolbox/issues/745)
-##### Commands
+- : [Check this thread](https://github.com/docker/toolbox/issues/745)
+### Commands
 -1 : To start       :net start com.docker.service
 -2 : docker ps -a   : To list all the containers
 -3 : docker run     : To run an image.If it does not exist it will be pulled from docker-hub
@@ -73,11 +72,13 @@ In a bid to organize my code more I landed on to design principles and structura
 -9 : docker run -it name: To be logged into container
 -10 : docker rm a b c : Remove multiple containers
 -11 : docker rmi name : Removing docker image
-##### Executing Command On Running Container
+-12 : docker exec ID cat /abc : Accessing files inside the docker
+-13 : docker run --name webapp nginx:1.14-alpine
+### Commands On Running Container
 -1 : docker run name/abcd : Things run in attached mode i.e in Background
 -2 : Ctrl+C: To stop the container
 -3 : docker run -d name/abcd : You will be back to prompt immediately
-##### On Ubuntu
+### On Ubuntu
 - Follow the official documentation
 ### About CI/CD tools
 - [About Jenkins](https://www.youtube.com/playlist?list=PLCRqvOk_BGhVi_mT_urqoJqcndJkf2lDS)
