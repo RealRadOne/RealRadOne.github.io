@@ -72,6 +72,7 @@ In a bid to organize my code more I landed on to design principles and structura
 -8 : docker pull    : To pull only the image
 -9 : docker run -it name: To be logged into container
 -10 : docker rm a b c : Remove multiple containers
+-11 : docker rmi name : Removing docker image
 ##### Executing Command On Running Container
 -1 : docker run name/abcd : Things run in attached mode i.e in Background
 -2 : Ctrl+C: To stop the container
@@ -81,21 +82,34 @@ In a bid to organize my code more I landed on to design principles and structura
 ### About CI/CD tools
 - [About Jenkins](https://www.youtube.com/playlist?list=PLCRqvOk_BGhVi_mT_urqoJqcndJkf2lDS)
 ### Bash Scripting
-- [WIP](#)
+- [A good scripting Guide](http://mywiki.wooledge.org/BashGuide)
+- [Advanced Scripting Guide](http://www.tldp.org/LDP/abs/abs-guide.pdf)
 ### Scripting w/PowerShell
 The Windows CounterPart Of Bash.
 - [Why I hate Powershell?](https://www.educba.com/powershell-vs-cmd/)
+- [Learn in a month of Lunches](#)
 ## CyberSecurity
 ### More About Computers
 Inspired By Mr Robot
 - [RainBow Tables-How they work?](http://kestas.kuliukas.com/RainbowTables/)
 - [About Salting And Peppering](https://blogs.quickheal.com/password-security-a-dash-of-salt-and-little-of-hash-to-go-please/)
 - [How does SHA-256 work](https://www.youtube.com/watch?v=mbekM2ErHfM)
-
+-[]
 ## Big Data
 
 ### Spark
 - [Beginner Introduction to Spark](https://www.analyticsvidhya.com/blog/2019/10/pyspark-for-beginners-first-steps-big-data-analysis/)
 - [Hands On Tutorials](https://www.datacamp.com/community/tutorials/apache-spark-python#gs.fMIIqxM)
+- [Setting it up with Docker](https://www.pavanpkulkarni.com/blog/13-spark-on-docker/)
 ### Hadoop
 - [All the notes](https://docs.google.com/document/d/18wWGCD7K9vfZbufr7sPc7k2vyxxQSCkBhN9eHOL7V60/edit?usp=drive_web&ouid=100286576712943071349)
+
+## About DBMS
+### A store of SQL and NoSQL Data Bases
+### MySQL
+- [My Notes](https://docs.google.com/document/d/1FXsBstMlArobcqVFMgM_SBK4aaPRlic-9-_m3RCMWtU/edit?usp=drive_web&ouid=100286576712943071349)
+### MongoDB
+- [My Notes](https://docs.google.com/document/d/1NWE_j-CYRuXT91AfHxX051GwHef46v09ysdPx7Ass9o/edit)
+### Redis
+- [Interactive Redis](https://try.redis.io/)
+- [0 to Master in 30 Min](https://www.openmymind.net/2011/11/8/Redis-Zero-To-Master-In-30-Minutes-Part-1/)
