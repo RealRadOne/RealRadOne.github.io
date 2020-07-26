@@ -72,16 +72,27 @@ Note:Ubuntu WSL is not sufficient to run docker.Shall not be considered a substi
 -9 : docker run -it name: To be logged into container
 -10 : docker rm a b c : Remove multiple containers
 -11 : docker rmi name : Removing docker image
--12 : docker exec ID cat /abc : Accessing files inside the docker
+-12 : docker exec ID cat /abc : Accessing files inside docker
 -13 : docker run --name webapp nginx:1.14-alpine
+-14 : docker inspect name : Additional details about container
 
 ### Commands On Running Container
-
 -1 : docker run name/abcd : Things run in attached mode i.e in Background
 -2 : Ctrl+C: To stop the container
 -3 : docker run -d name/abcd : You will be back to prompt immediately
-### On Ubuntu
-- Follow the official documentation
+-4 : docker run -i : For running in interactive mode
+
+### Port Mapping
+- Docker Host/Engine : The host where docker is installed
+- IP on which I can access the application from web browser
+-1 : Use the default IP(Only accessible within the docker host)
+-2 : Ex- docker run -p 80:5000 abc/xyz
+
+### Volume Mapping
+To ensure a local data store.Map a directory outside the container on the Docker.
+- Ex: docker run -v /opt/datadir: /var/lib/mysql MySQL
+- opt/datadir mapped to /var/lib/mysql
+
 ### About CI/CD tools
 - [About Jenkins](https://www.youtube.com/playlist?list=PLCRqvOk_BGhVi_mT_urqoJqcndJkf2lDS)
 ### Bash Scripting
