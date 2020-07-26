@@ -26,7 +26,7 @@ In a bid to organize my code more I landed on to design principles and structura
 ### Part-5 <br>
 - [Bugging Builders](https://medium.com/@sakshisinha.2016/deadly-designs-d02e04c20300)
 
-# Links From The Internet
+# Everything Computers!
 
 ## Data Structures
 ### Data Structure Resources<br>
@@ -44,17 +44,38 @@ In a bid to organize my code more I landed on to design principles and structura
 ### Docker
 #### Installation
 ##### On Windows
+- Note: I would never recommend trying this on windows.
+- You might doubt your existence,feel like pulling all the hair from your head.Yes,Windows sucks!
 - [Note:Ubuntu WSL is not sufficient to run docker.Shall not be considered a substitute.]
 - For Windows Home:
-- After Installing docker
-- Edit Windows Version in Registry<br>
-- 1. Press Windows + R and write regedit<br>
-- 2.In the Registry Editor, go to \HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion<br>
-- 3.Right-click on EditionID and Click Modify<br>
-- 4.Change Value Data to "Professional"<br>
-- Press OK.<br>
-- Install Docker<br>
-- After the installation, you can change the EditionID back to "Core"
+-- As Docker is only avaiable for Windows enterprise edition
+-- After Installing docker
+-- Edit Windows Version in Registry<br>
+-- Press Windows + R and write regedit<br>
+-- In the Registry Editor, go to \HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion<br>
+-- Right-click on EditionID and Click Modify<br>
+-- Change Value Data to "Professional"<br>
+-- Press OK
+-- Install Docker Desktop
+-- After the installation, you can change the EditionID back to "Core"
+- After this install docker toolbox
+- Ensure that nothing like Hyper-V or Windows Virtualization platform is Running
+- [Check this thread](https://github.com/docker/toolbox/issues/745)
+##### Commands
+-1 : To start       :net start com.docker.service
+-2 : docker ps -a   : To list all the containers
+-3 : docker run     : To run an image.If it does not exist it will be pulled from docker-hub
+-4 : docker stop ID : To stop a running container
+-5 : docker rm ID(First few letters will do)   : To remove a container permanently
+-6 : docker images  : List of images on System
+-7 : docker rmi     : To remove an images
+-8 : docker pull    : To pull only the image
+-9 : docker run -it name: To be logged into container
+-10 : docker rm a b c : Remove multiple containers
+##### Executing Command On Running Container
+-1 : docker run name/abcd : Things run in attached mode i.e in Background
+-2 : Ctrl+C: To stop the container
+-3 : docker run -d name/abcd : You will be back to prompt immediately
 ##### On Ubuntu
 - Follow the official documentation
 ### About CI/CD tools
@@ -70,3 +91,11 @@ Inspired By Mr Robot
 - [RainBow Tables-How they work?](http://kestas.kuliukas.com/RainbowTables/)
 - [About Salting And Peppering](https://blogs.quickheal.com/password-security-a-dash-of-salt-and-little-of-hash-to-go-please/)
 - [How does SHA-256 work](https://www.youtube.com/watch?v=mbekM2ErHfM)
+
+## Big Data
+
+### Spark
+- [Beginner Introduction to Spark](https://www.analyticsvidhya.com/blog/2019/10/pyspark-for-beginners-first-steps-big-data-analysis/)
+- [Hands On Tutorials](https://www.datacamp.com/community/tutorials/apache-spark-python#gs.fMIIqxM)
+### Hadoop
+- [All the notes](https://docs.google.com/document/d/18wWGCD7K9vfZbufr7sPc7k2vyxxQSCkBhN9eHOL7V60/edit?usp=drive_web&ouid=100286576712943071349)
