@@ -74,7 +74,9 @@ Note:Ubuntu WSL is not sufficient to run docker.Shall not be considered a substi
 -11 : docker rmi name : Removing docker image
 -12 : docker exec ID cat /abc : Accessing files inside the docker
 -13 : docker run --name webapp nginx:1.14-alpine
+
 ### Commands On Running Container
+
 -1 : docker run name/abcd : Things run in attached mode i.e in Background
 -2 : Ctrl+C: To stop the container
 -3 : docker run -d name/abcd : You will be back to prompt immediately
