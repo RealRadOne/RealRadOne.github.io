@@ -105,7 +105,6 @@ Inspired By Mr Robot
 - [All the notes](https://docs.google.com/document/d/18wWGCD7K9vfZbufr7sPc7k2vyxxQSCkBhN9eHOL7V60/edit?usp=drive_web&ouid=100286576712943071349)
 
 ## About DBMS
-### A store of SQL and NoSQL Data Bases
 ### MySQL
 - [My Notes](https://docs.google.com/document/d/1FXsBstMlArobcqVFMgM_SBK4aaPRlic-9-_m3RCMWtU/edit?usp=drive_web&ouid=100286576712943071349)
 ### MongoDB
