@@ -186,8 +186,8 @@ Resources to get you going
 - b : Move to the next word
 - e : End of the word
 
-### About Ansible
-#### Understanding YAML
-Just a formal like XML or JSON!
+## Ansible
+## Understanding YAML
+Just a format like XML or JSON!
 - Data represented in Key-Value pairs
 - 
