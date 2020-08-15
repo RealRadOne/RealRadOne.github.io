@@ -190,6 +190,7 @@ Resources to get you going
 - Agentless
 - Uses SSH in Linux
 - Powershell for Windows
+- BEWARE OF INDENTATION WITH ANSIBLE 
 
 ### Installation
 - For everyone who hates Windows.WSL is here to save our ass.Yayyy!
@@ -216,6 +217,7 @@ Just a format like XML or JSON!
 -- To define a group in a group
 -- [parent_group:"children"] List child groups
 -- Ansible host:Use it to define IP of a server
+-- If we do not define a group things go by default to all
 
 ### Inventory Parameters
 
