@@ -187,7 +187,59 @@ Resources to get you going
 - e : End of the word
 
 ## Ansible
-## Understanding YAML
+- Agentless
+- Uses SSH in Linux
+- Powershell for Windows
+
+### Installation
+- For everyone who hates Windows.WSL is here to save our ass.Yayyy!
+- [Ansible through Windows](https://www.jeffgeerling.com/blog/2017/using-ansible-through-windows-10s-subsystem-linux)
+
+### Understanding YAML
 Just a format like XML or JSON!
 - Data represented in Key-Value pairs
-- 
+
+### Ansible Inventory
+- Data about the target systems is stored in these files
+- If we do not create one data is stored in default inventory file
+- File may be in etc/ansible/hosts
+- Format can have servers listed up
+
+
+### Inventory file
+-- In ini format
+-- A file to list set of servers
+-- To define a group
+-- [Group name]--List servers
+-- There can be multiple groups
+-- These gorups can be nested
+-- To define a group in a group
+-- [parent_group:"children"] List child groups
+-- Ansible host:Use it to define IP of a server
+
+### Inventory Parameters
+
+-- Ex Ansible_host
+-- If you do not have multiple servers use localhost at the beginning of the file
+-- Ansible_Port
+-- Tells which port to connect 
+-- Ansible_SSH_pass
+-- Defines the SSH password for Linux
+
+### Ansible Playbooks
+
+-- Ansible's Orchestration Language
+-- We define what we want Ansible to do
+-- A set of instructions
+-- A YAML file which is a set of plays
+
+### Ansible Plays
+
+-- Define a set of activities(tasks)
+-- Task
+-1. An action performed on the host
+-- Ex-run a script,install package
+-- Tasks are represented in the playbook as an array
+-- The position of entries here matters
+-- Indentation and orientation necessary
+-- 
