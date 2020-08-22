@@ -191,57 +191,105 @@ Resources to get you going
 - Uses SSH in Linux
 - Powershell for Windows
 - BEWARE OF INDENTATION WITH ANSIBLE 
+- Eshtablishes connections with servers through SSH
+- 
 
 ### Installation
 - For everyone who hates Windows.WSL is here to save our ass.Yayyy!
 - [Ansible through Windows](https://www.jeffgeerling.com/blog/2017/using-ansible-through-windows-10s-subsystem-linux)
 
 ### Understanding YAML
-Just a format like XML or JSON!
-- Data represented in Key-Value pairs
+#### Just a format like XML or JSON!
+- Data should be represented in Key-Value pairs
 
 ### Ansible Inventory
-- Data about the target systems is stored in these files
-- If we do not create one data is stored in default inventory file
-- File may be in etc/ansible/hosts
-- Format can have servers listed up
-
+- Has data about target systems
+- Default inventory: etc/ansible/hosts
+- A List of servers
 
 ### Inventory file
--- In ini format
--- A file to list set of servers
 -- To define a group
 -- [Group name]--List servers
--- There can be multiple groups
--- These gorups can be nested
+-- Multiple nested groups possible
 -- To define a group in a group
 -- [parent_group:"children"] List child groups
--- Ansible host:Use it to define IP of a server
--- If we do not define a group things go by default to all
+-- Default group: All
+-- [Example Inventory file](https://riptutorial.com/ansible/example/22593/hosts-file)
 
 ### Inventory Parameters
 
--- Ex Ansible_host
--- If you do not have multiple servers use localhost at the beginning of the file
--- Ansible_Port
--- Tells which port to connect 
--- Ansible_SSH_pass
--- Defines the SSH password for Linux
+-- Examples
+-- 1. Ansible_host: Define localhost in absence of other hosts
+-- 2. Ansible_Port: Tells which port to connect 
+-- 3. Ansible_SSH_pass: Define the SSH password for Linux
 
 ### Ansible Playbooks
 
 -- Ansible's Orchestration Language
--- We define what we want Ansible to do
--- A set of instructions
--- A YAML file which is a set of plays
+-- Set of instructions
+-- Written in YAML format 
 
 ### Ansible Plays
 
 -- Define a set of activities(tasks)
 -- Task
--1. An action performed on the host
--- Ex-run a script,install package
+-  1. An action performed on the host
+-  2. Ex-run a script,install package
 -- Tasks are represented in the playbook as an array
 -- The position of entries here matters
 -- Indentation and orientation necessary
--- 
+
+### Ansible Modules
+
+-- Example: System,DataBase etc
+-- Ensure idempotency in all the modules
+
+### Command Module
+
+-- A free form parameter
+-- Execute command on a remote node
+-- Module Name: Command
+-- Refrence:
+-- [Official Documentation](https://docs.ansible.com/ansible/latest/modules/command_module.html)
+
+### Script Module
+
+- Executes a script local to Ansible
+- Takes care of copying scripts and executing on remote systems
+- Syntax: script: location
+
+### Service Module
+
+-   Start,Stop or Restart a service
+[x] Started   
+[-] Start 
+-   Started:to endure the service is started
+-   Ensures idempotency of an operation
+
+### Ansible Variables
+
+- Hold information about the hosts
+- Example:ansible_host,ansible_connection etc in inventory
+- To add to playbook use vars directive
+- Can be defined in a seperate file as well
+- Format used:jinja 2 templating name{{}}
+
+### Ansible Conditionals
+
+- Use when <<condition>>
+- Example when: variable=="name"
+- Use ==
+- Use and
+
+### Ansible Roles
+
+- Can be used for better code 
+- Get it from Ansible Directory
+- [Ansible Galaxy](https://galaxy.ansible.com/)
+- These roles can be specified at etc/ansible
+- ansible-galaxy search
+- ansible-galaxy run 
+- ansible-galaxy list
+- Specify under roles
+- 
+
