@@ -1,0 +1,6 @@
+shortcut_icon=../media/interface/favicon.ico
+icon=../media/interface/favicon.jpeg
+name=Mizi
+description=Site generated using Mizi
+header=<a id='logo' href='home.html'><img src='../media/interface/logo.jpeg' alt='logo' ></a>
+footer=<p>Website generated using <u><a href='https://github.com/abstractxan/Mizi'>abstractxan/Mizi</a><u></p>
