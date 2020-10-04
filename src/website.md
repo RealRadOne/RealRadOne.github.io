@@ -333,12 +333,11 @@ Inspired By Mr Robot
 
 ### My October Of Changes
 
----
-*Here are some things I have been doing*
+Here are some things I have been doing
 - [Coding Log](https://github.com/RealRadOne/30-days-of-DS/blob/master/LeetCode/Day1.md)
 - [Learning About Azure](https://github.com/RealRadOne/30-days-of-DS/blob/master/Azure/basics.md)
 - [System Design](#)
----
+
 
 ### Goals in October
 - Waking up earlier
@@ -348,14 +347,13 @@ Inspired By Mr Robot
 - Healthy Work Life Balance
 - Taking better care of personal and professional realtions
 
-### *Oktober Journal*
+### Oktober Journal
 
 - 3/10/2020
-- ![Starting with Azure](https://drive.google.com/file/d/1G1eny8Z5H56Ih53oSmGG0gKovBGVfBa9/view?usp=sharing)
-
+- <p> <img class='thumbnail' style='width:200px' src='https://ibb.co/2q0ZjnJ'>
 - 4/10/202
-- ![Azure CLI](https://drive.google.com/file/d/12GzqTQ8caawAw1b7B0EFWQx_Cab8WRe9/view?usp=sharing)
-- ![Some Failed Git Workflows](https://drive.google.com/file/d/1PUuF4cCBBy-Rh6xfs7kpG_HKPpm3xWvP/view?usp=sharing)
+- <p> <img class='thumbnail' style='width:200px' src='https://ibb.co/ZGzKfXf'>
+- <p> <img class='thumbnail' style='width:200px' src='https://ibb.co/5xy5h0w'>
 :)
 
 ## Azure Notes
