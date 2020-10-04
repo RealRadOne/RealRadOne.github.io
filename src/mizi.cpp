@@ -104,7 +104,7 @@ struct Category {
   Page *pages[32];
 };
 
-struct Category *Categories[16];
+struct Category *Categories[32];
 struct Page *SeparatePages[20];
 
 Category *createCategory(string name, int count) {
