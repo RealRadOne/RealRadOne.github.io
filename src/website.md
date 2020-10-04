@@ -350,10 +350,10 @@ Here are some things I have been doing
 ### Oktober Journal
 
 - 3/10/2020
-- <p> <img class='thumbnail' style='width:200px' src='https://ibb.co/2q0ZjnJ'>
+- <p> <img class='thumbnail' style='width:200px' src='https://ibb.co/2q0ZjnJ'></p>
 - 4/10/202
-- <p> <img class='thumbnail' style='width:200px' src='https://ibb.co/ZGzKfXf'>
-- <p> <img class='thumbnail' style='width:200px' src='https://ibb.co/5xy5h0w'>
+- <p> <img class='thumbnail' style='width:200px' src='https://ibb.co/ZGzKfXf'></p>
+- <p> <img class='thumbnail' style='width:200px' src='https://ibb.co/5xy5h0w'></p>
 :)
 
 ## Azure Notes
