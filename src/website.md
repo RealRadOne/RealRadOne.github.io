@@ -350,10 +350,10 @@ Here are some things I have been doing
 ### Oktober Journal
 
 - 3/10/2020
-<p> <img class='thumbnail' style='width:400px' src='https://radstore.s3.ap-south-1.amazonaws.com/Oktober-2.PNG'></p><p></p>
+<p> <img src='https://radstore.s3.ap-south-1.amazonaws.com/Oktober-2.PNG'></p><p></p>
 - 4/10/2020
-<p> <img class='thumbnail' style='width:400px' src='https://radstore.s3.ap-south-1.amazonaws.com/Screenshot+(106).png'></p><p></p>
-<p> <img class='thumbnail' style='width:400px' src='https://radstore.s3.ap-south-1.amazonaws.com/Screenshot+(108).png'></p><p></p>
+<p> <img src='https://radstore.s3.ap-south-1.amazonaws.com/Screenshot+(106).png'></p><p></p>
+<p> <img src='https://radstore.s3.ap-south-1.amazonaws.com/Screenshot+(108).png'></p><p></p>
 :)
 
 ## Azure Notes
