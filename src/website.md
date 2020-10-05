@@ -335,7 +335,8 @@ Inspired By Mr Robot
 
 Here are some things I have been doing
 - [Coding Log](https://github.com/RealRadOne/30-days-of-DS/blob/master/LeetCode/Day1.md)
-- [Learning About Azure](https://github.com/RealRadOne/30-days-of-DS/blob/master/Azure/basics.md)
+- [Learning About Azure](https://realradone.github.io/site/azure_notes.html)
+- [Learning Angular](https://realradone.github.io/site/Angular.html)
 - [System Design](#)
 
 
@@ -405,3 +406,10 @@ There is no OS to boot and initialize.We only need the app to launch.
 
  
 
+## Angular
+### Angular Intro
+
+ I personally hate front-end frameworks but need to start with Angular due to professional reasons.
+ Lez-Go
+
+ - [My Goto Playlist rn](https://www.youtube.com/playlist?list=PLq5m66kIJ5Z-KNR-xdK2GMiDlLLcpXLLB)
