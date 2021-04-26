@@ -44,6 +44,49 @@ In a bid to organize my code more I landed on to design principles and structura
 - [How to Ace Coding Interviews](https://medium.com/better-programming/how-to-ace-the-coding-interview-by-an-ex-facebook-interviewer-9c163a845d05)
 - [How to stay relevant](https://levelup.gitconnected.com/how-to-stay-relevant-and-get-tech-companies-to-beg-you-to-work-for-them-2e3ea445454f)
 
+## Networks
+### TCP Socket States
+- The instantiation of an endpoint in a potential TCP connection.
+- You can send traffic to any port you want, but you're only going to get a response if a program has opened a socket on that port.
+###  Common TCP Ports
+- LISTEN: TCP Socket is ready and listening
+- SYN_SENT: Synchronization request has been sent but connection has not been eshtablished yet
+- SYN_RECIEVED: SYN_ACK sent back but final ACK is yet not recieved
+- ESHTABLISHED: TCP connection is in working order
+- FIN_WAIT: FIN has been sent but corresponding ACK from the other end has nnot been recieved yet
+- CLOSE_WAIT: Connection has been closed at the TCP Layer
+
+### Connection Oriented Protocol
+- Eshtablishes a connection and ensures that all the data has been properly transmitted
+- A bit is just an electrical signal within a certain voltage range
+
+#### Common reasons for the data to not get through
+- Congestion might cause a router to drop your traffic 
+- TCP expects an ACK for every bit of data it sends
+- Best to know the segment of data sent and the amount of data expected back
+
+### Connectionless protocols
+- Example: UDP
+- Lesser overheads,Do not care if a few packets get lost along the way
+
+### System Ports vs Ephemeral Ports
+- Transportation layer ports are represented by single 16 bit number
+- Range has been split up by the IANA-Internet Assigned Numbers Authority
+- Port0- Used sometimes
+- Ports 1-1023: System ports.Official ports for mosy well-known network services
+- HTTP normally communicates over Port 80
+- FTP normally communicates over Port 21
+- Ports 1024-49151: Registered Ports,used for lots of other network services
+
+### FireWalls
+- A device that blocks traffic which meets certain crtiteria
+- Can function on multiple layers of network
+- How do they work?
+- Can perform inspection of application layer traffic
+- Can block ranges of IP Addresses
+- Only sometimes are they independent network devices.For most of the networks firewall performs the function of router+firewall
+
+
 ## System Design
 ### System Design Resources
 - [Tian Pan's Blogs](https://tianpan.co/notes/2016-02-13-crack-the-system-design-interview)
@@ -173,6 +216,8 @@ Inspired By Mr Robot
 - [0 to Master in 30 Min](https://www.openmymind.net/2011/11/8/Redis-Zero-To-Master-In-30-Minutes-Part-1/)
 
 ## Dev Kid's Basics
+
+******************
 ### About Git
 - A developer's essential
 - Resources to get you going
@@ -413,3 +458,19 @@ There is no OS to boot and initialize.We only need the app to launch.
  Lez-Go
 
  - [My Goto Playlist rn](https://www.youtube.com/playlist?list=PLq5m66kIJ5Z-KNR-xdK2GMiDlLLcpXLLB)
+
+
+## React-Ing
+### What are Components?
+- Reusable building blocks in User Interface
+- Combo of HTML,CSS and JS
+- Declarative Approach: Define the desired end state and let React figure out the rest of the stuff involved
+- Custom HTML Element
+- Technically just a javascript function
+
+### About JSX
+- JavaScript+XML
+
+### Building Our Component
+- []
+
