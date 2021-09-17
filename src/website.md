@@ -44,38 +44,38 @@ In a bid to organize my code more I landed on to design principles and structura
 - [How to Ace Coding Interviews](https://medium.com/better-programming/how-to-ace-the-coding-interview-by-an-ex-facebook-interviewer-9c163a845d05)
 - [How to stay relevant](https://levelup.gitconnected.com/how-to-stay-relevant-and-get-tech-companies-to-beg-you-to-work-for-them-2e3ea445454f)
 
-## Networks
-### TCP Socket States
-- The instantiation of an endpoint in a potential TCP connection.
-- You can send traffic to any port you want, but you're only going to get a response if a program has opened a socket on that port.
-###  Common TCP Ports
-- LISTEN: TCP Socket is ready and listening
-- SYN_SENT: Synchronization request has been sent but connection has not been eshtablished yet
-- SYN_RECIEVED: SYN_ACK sent back but final ACK is yet not recieved
-- ESHTABLISHED: TCP connection is in working order
-- FIN_WAIT: FIN has been sent but corresponding ACK from the other end has nnot been recieved yet
-- CLOSE_WAIT: Connection has been closed at the TCP Layer
+## System Design
+### System Design Resources
+- [Tian Pan's Blogs](https://tianpan.co/notes/2016-02-13-crack-the-system-design-interview)
 
-### Connection Oriented Protocol
-- Eshtablishes a connection and ensures that all the data has been properly transmitted
-- A bit is just an electrical signal within a certain voltage range
+## Docker
+### Installation On Windows
+Note: I would never recommend trying docker on windows.You might doubt your existence and feel like pulling all the hair from your head.<br>
+Note:Ubuntu WSL is not sufficient to run docker.Shall not be considered a substitute.
+### For Windows Home:
+-1 : As Docker is only available for Windows enterprise edition
+-2 : After Installing docker
+-3 : Edit Windows Version in Registry<br>
+-4 : Press Windows + R and write regedit<br>
+-5 : In the Registry Editor, go to \HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion<br>
+-6 : Right-click on EditionID and Click Modify<br>
+-7 : Change Value Data to "Professional"<br>
+-8 : Press OK
+- Install Docker Desktop
+- After the installation, you can change the EditionID back to "Core"
+- After this install docker toolbox
+- Ensure that nothing like Hyper-V or Windows Virtualization platform is Running
+- : [Check this thread](https://github.com/docker/toolbox/issues/745)
 
-#### Common reasons for the data to not get through
-- Congestion might cause a router to drop your traffic 
-- TCP expects an ACK for every bit of data it sends
-- Best to know the segment of data sent and the amount of data expected back
-
-### Connectionless protocols
-- Example: UDP
-- Lesser overheads,Do not care if a few packets get lost along the way
-
-### System Ports vs Ephemeral Ports
-- Transportation layer ports are represented by single 16 bit number
-- Range has been split up by the IANA-Internet Assigned Numbers Authority
-- Port0- Used sometimes
-- Ports 1-1023: System ports.Official ports for mosy well-known network services
-- HTTP normally communicates over Port 80
-- FTP normally communicates over Port 21
+### Commands
+- To start       : net start com.docker.service
+- docker ps -a   : List all the containers
+- docker run     : Run an image.If it does not exist it will be pulled from docker-hub
+- docker stop ID : Stop a running container
+- docker rm ID(First few letters will do)   : Remove a container permanently
+- docker images  : List of images on System
+- docker rmi     : Remove an image
+- docker pull    : Pull the image
 - Ports 1024-49151: Registered Ports,used for lots of other network services
 
 ### FireWalls
@@ -170,49 +170,6 @@ A better way to set up complex application running multiple services
 - All changes stored in docker compose config file
 -  
 
-## About CI/CD tools
-### Jenkins
-- Jenkins is a web server
-- [About Jenkins](https://www.youtube.com/playlist?list=PLCRqvOk_BGhVi_mT_urqoJqcndJkf2lDS)
-
-### Bash Scripting
-- [A good scripting Guide](http://mywiki.wooledge.org/BashGuide)
-- [Advanced Scripting Guide](http://www.tldp.org/LDP/abs/abs-guide.pdf)
-
-### Scripting w/PowerShell
-- The Windows CounterPart Of Bash.
-- [Why I hate Powershell?](https://www.educba.com/powershell-vs-cmd/)
-- [Learn in a month of Lunches](#)
-
-## CyberSecurity
-### More About Computers
-Inspired By Mr Robot
-- [RainBow Tables-How they work?](http://kestas.kuliukas.com/RainbowTables/)
-- [About Salting And Peppering](https://blogs.quickheal.com/password-security-a-dash-of-salt-and-little-of-hash-to-go-please/)
-- [How does SHA-256 work](https://www.youtube.com/watch?v=mbekM2ErHfM)
-- [Have I been pwned?](https://haveibeenpwned.com/)
-- [Why salting with usernames is bad](https://smerity.com/articles/2012/salting_with_usernames.html)
-- []
-
-## Big Data
-
-### Spark
-- [Beginner Introduction to Spark](https://www.analyticsvidhya.com/blog/2019/10/pyspark-for-beginners-first-steps-big-data-analysis/)
-- [Hands On Tutorials](https://www.datacamp.com/community/tutorials/apache-spark-python#gs.fMIIqxM)
-- [Setting it up with Docker](https://www.pavanpkulkarni.com/blog/13-spark-on-docker/)
-
-### Hadoop
-- [All the notes](https://docs.google.com/document/d/18wWGCD7K9vfZbufr7sPc7k2vyxxQSCkBhN9eHOL7V60/edit?usp=drive_web&ouid=100286576712943071349)
-
-## About DBMS
-### MySQL
-- [My Notes](https://docs.google.com/document/d/1FXsBstMlArobcqVFMgM_SBK4aaPRlic-9-_m3RCMWtU/edit?usp=drive_web&ouid=100286576712943071349)
-
-### MongoDB
-- [My Notes](https://docs.google.com/document/d/1NWE_j-CYRuXT91AfHxX051GwHef46v09ysdPx7Ass9o/edit)
-
-### Redis
-- [Interactive Redis](https://try.redis.io/)
 - [0 to Master in 30 Min](https://www.openmymind.net/2011/11/8/Redis-Zero-To-Master-In-30-Minutes-Part-1/)
 
 ## Dev Kid's Basics
@@ -268,6 +225,10 @@ Inspired By Mr Robot
 - kubectl describe podname: More info
 - kubectl delete podname: Remove a pod
 - kubectl edit pod: For editing yaml
+
+## A Very Very Basic Linux Guide
+- Note: These Notes are W.I.P and change regularly
+- [Link To Notes](https://realradone.github.io/site/Linux.pdf)
 
 ## Ansible
 - Agentless
@@ -458,19 +419,3 @@ There is no OS to boot and initialize.We only need the app to launch.
  Lez-Go
 
  - [My Goto Playlist rn](https://www.youtube.com/playlist?list=PLq5m66kIJ5Z-KNR-xdK2GMiDlLLcpXLLB)
-
-
-## React-Ing
-### What are Components?
-- Reusable building blocks in User Interface
-- Combo of HTML,CSS and JS
-- Declarative Approach: Define the desired end state and let React figure out the rest of the stuff involved
-- Custom HTML Element
-- Technically just a javascript function
-
-### About JSX
-- JavaScript+XML
-
-### Building Our Component
-- []
-
