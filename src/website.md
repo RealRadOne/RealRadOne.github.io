@@ -229,6 +229,7 @@ A better way to set up complex application running multiple services
 ## A Very Very Basic Linux Guide
 - Note: These Notes are W.I.P and change regularly
 - [Link To Notes](https://realradone.github.io/site/Linux.pdf)
+- [Crony Bash](https://github.com/RealRadOne/Crony-Bash)
 
 ## Ansible
 - Agentless
