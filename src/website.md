@@ -2,13 +2,19 @@
 ## About
 ### An Introduction
 Hey there, I am Sakshi.<br>
-This is an observer in this constantly evolving world and observes everything be it arts, politics or music. However, what amazes me the most is how technology has changed all the domains.
-And you are cordially invited to my observation book that documents my journey.
+In the 25 years of my current existence, one thing that has stayed true to me is working with challenging problems. Be it my undergrad, the oil and gas sector or the finance sector, or my grad school. Yep! After 3 years of spending my time in the industry I decided to return back to grad school to learn more about computers, maths and LIFE! 
+Growing up I travelled across India and now I study in the beautiful town of Stony Brook near New York.Born to parents who adored literature, politics and economics in their own rights.I embrace my identity as a proud nationalist Indian coming from humble Bihar. This is my digital garden on second brain where I aim to make Computer Science fun and maybe informative.
 <p> <img class='thumbnail' style='width:200px' src='https://i.ibb.co/86mkYtd/20190413-063202.jpg'> </p><p>
 </p>
 
-### Professional Life
-I am a grad in Computer Science from VIT University and I currently work for <a href=''>ExxonMobil</a> EMIT<br>
+### Professional Life 
+## Completed my undergrad in Computer Science from a place to learn that gives a chance to grow(JK) VIT in 2020</br>
+## Started working as a software engineer for ExxonMobil. I did a ton of automative work with Ansible, PI Web API and Terraform for the PI Team. Once my job was done with Production Technologies I moved to Surveillance and Optimisation after being awarded the employee of quarter. Surveillance and Optimization presented me with challenges of building a DATA LAKE for ExxonMobil and the tools at my disposal for working on this herculean task were Azure Data Factory, Snowflake, PowerBI(for Visualisation)and Azure SQL Server. I also did a bit of React and Angular for side projects at my time at Exxon.
+## In 2022 I decided to embark on a new challenge and move to Societe Generale. It was here I learnt a ton about Docker, Terraform, Ansible and Observability from the coolest lead devs like Saleem Sheik and Sreevastav Pamban(people I aspire to be like).Worked a little on enabling Observability for Societe
+## Bid farewell to Societe to come back to Stony Brook as a graduate student in computer Science
+
+### Current Endaveour
+## I currently work on DAG based BFT protocols under the guidance of Prof. Muhammad Javad Amiri under the hood of UPenn's DB lab. A project I thorougly enjoy!
 
 ## Articles
 ### Deadly Designs
