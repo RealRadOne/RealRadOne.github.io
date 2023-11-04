@@ -8,13 +8,16 @@ Growing up I travelled across India and now I study in the beautiful town of Sto
 </p>
 
 ### Professional Life 
-## Completed my undergrad in Computer Science from a place to learn that gives a chance to grow(JK) VIT in 2020</br>
-## Started working as a software engineer for ExxonMobil. I did a ton of automative work with Ansible, PI Web API and Terraform for the PI Team. Once my job was done with Production Technologies I moved to Surveillance and Optimisation after being awarded the employee of quarter. Surveillance and Optimization presented me with challenges of building a DATA LAKE for ExxonMobil and the tools at my disposal for working on this herculean task were Azure Data Factory, Snowflake, PowerBI(for Visualisation)and Azure SQL Server. I also did a bit of React and Angular for side projects at my time at Exxon.
-## In 2022 I decided to embark on a new challenge and move to Societe Generale. It was here I learnt a ton about Docker, Terraform, Ansible and Observability from the coolest lead devs like Saleem Sheik and Sreevastav Pamban(people I aspire to be like).Worked a little on enabling Observability for Societe
-## Bid farewell to Societe to come back to Stony Brook as a graduate student in computer Science
+Completed my undergrad in Computer Science from a place to learn that gives a chance to grow(JK) VIT in 2020</br>
+Started working as a software engineer for ExxonMobil. I did a ton of automative work with Ansible, PI Web API and Terraform for the PI Team. Once my job was done with Production Technologies I moved to Surveillance and Optimisation after being awarded the employee of quarter. Surveillance and Optimization presented me with challenges of building a DATA LAKE for ExxonMobil and the tools at my disposal for working on this herculean task were Azure Data Factory, Snowflake, PowerBI(for Visualisation)and Azure SQL Server. I also did a bit of React and Angular for side projects at my time at Exxon.
+<br>
+In 2022 I decided to embark on a new challenge and move to Societe Generale. It was here I learnt a ton about Docker, Terraform, Ansible and Observability from the coolest lead devs like Saleem Sheik and Sreevastav Pamban(people I aspire to be like).Worked a little on enabling Observability for Societe
+<br>
+Bid farewell to Societe to come back to Stony Brook as a graduate student in computer Science
+<br>
 
 ### Current Endaveour
-## I currently work on DAG based BFT protocols under the guidance of Prof. Muhammad Javad Amiri under the hood of UPenn's DB lab. A project I thorougly enjoy!
+I currently work on DAG based BFT protocols under the guidance of Prof. Muhammad Javad Amiri under the hood of UPenn's DB lab. A project I thorougly enjoy!
 
 ## Articles
 ### Deadly Designs
