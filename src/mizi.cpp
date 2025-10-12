@@ -81,7 +81,7 @@ string html_head(string text) {
          "<html lang='en'>\n"
          "<head>\n"
          "\t<link href='https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap' rel='stylesheet'>\n"
-         "\t<link rel='stylesheet' type='text/css' href='../style.css'>\n"
+         "\t<link rel='stylesheet' type='text/css' href='../src/style.css'>\n"
          "\t<link rel='shortcut icon' href='" + conf->shortcut_icon + "' type='image/x-icon'>\n"
          "\t<link rel='icon' href='" + conf->icon + "' type='image/x-icon'>\n"
          "\t<meta charset='utf-8'>\n"

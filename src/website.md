@@ -93,7 +93,7 @@ Note:Ubuntu WSL is not sufficient to run docker.Shall not be considered a substi
 - Can block ranges of IP Addresses
 - Only sometimes are they independent network devices.For most of the networks firewall performs the function of router+firewall
 
-## Dev Kid's Basics 👈 **New Page Header Added**
+## Dev Kid's Basics 
 
 ### About Git
 - A developer's essential
