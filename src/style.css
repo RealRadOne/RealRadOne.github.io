@@ -1,3 +1,7 @@
+/* Import a monospaced font that looks good for a terminal effect */
+/* @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap'); */
+
+/* Global Terminal Appearance */
 :root {
   --bg-color: #1e1e1e; /* Dark terminal background */
   --text-color: #00ff41; /* Classic green text */
@@ -176,4 +180,15 @@ pre {
 .thumbnail {
   border: 1px solid var(--text-color);
   box-shadow: 0 0 5px var(--text-color);
+}
+
+/* 🖱️ FIX FOR CONTENT OBSCURED BY SIDEBAR/HEADER */
+h1:target, h2:target, h3:target {
+    /* Offset the jump target by a small amount to clear fixed elements */
+    padding-top: 30px; 
+    /* Compensate for the padding-top with a negative margin */
+    margin-top: -30px; 
+    /* Optional: Provide visual feedback that the section was targeted */
+    color: yellow;
+    transition: color 0.5s ease;
 }

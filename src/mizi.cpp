@@ -4,9 +4,18 @@
 #include <sstream>
 #include <string>
 #include <vector>
-#include <algorithm> // Needed for std::find_if if parsing logic is complex
+#include <algorithm> 
 
 using namespace std;
+
+// --- Utility function to trim trailing whitespace (including newlines) ---
+string trim_trailing(const string& str) {
+    size_t end = str.find_last_not_of(" \t\n\r");
+    if (string::npos == end) {
+        return ""; // Empty string or all whitespace
+    }
+    return str.substr(0, end + 1);
+}
 
 // --- Data Structure for Table of Contents ---
 struct TocEntry{
@@ -36,6 +45,9 @@ Config *configParser() {
       if (getline(is_line, key, '=')) {
         string value;
         if (getline(is_line, value)) {
+          // --- FIX: Trim trailing whitespace from config values ---
+          value = trim_trailing(value); 
+          
           if (key == "shortcut_icon") {
             conf->shortcut_icon = value;
           } else if (key == "icon") {
@@ -63,34 +75,32 @@ Config *configParser() {
 
 Config *conf;
 
-// --- UPDATED: Added link for terminal font and local style.css ---
+// --- FIX: Added newlines and tabs for readable HTML output ---
 string html_head(string text) {
-  return "<!DOCTYPE html><html lang='en'><head>"
-         // Terminal font (Fira Code) link
-         "<link href='https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap' rel='stylesheet'>"
-         // Link to the custom style.css 
-         "<link rel='stylesheet' type='text/css' href='../style.css'>" 
-         
-         // Original Metadata
-         "<link rel='shortcut icon' href='" + conf->shortcut_icon + "' type='image/x-icon'>"
-         "<link rel='icon' href='" + conf->icon + "' type='image/x-icon'>"
-         "<meta charset='utf-8'>"
-         "<meta name='description' content='" + conf->description + "'>"
-         "<meta name='viewport' content='width=device-width, initial-scale=1.0'>"
-         "<meta name='twitter:card' content='summary'>"
-         "<meta name='twitter:site' content='" + conf->name + "'>"
-         "<meta name='twitter:title' content='" + conf->name + "'>"
-         "<meta name='twitter:description' content='" + conf->description + "'>"
-         "<meta name='twitter:creator' content='@" + conf->twitter_creator + "'>"
-         "<meta name='twitter:image' content='" + conf->icon + "'>"
-         "<meta property='og:title' content='" + conf->name + "'>"
-         "<meta property='og:site_name' content='" + conf->name + "'>"
-         "<title> " + conf->name + " - " + text +
-         "</title>"
-         // Added optional smooth scrolling
-         "<style>html { scroll-behavior: smooth; }</style>" 
-         
-         "</head><body class='" + text + "'>";
+  return "<!DOCTYPE html>\n"
+         "<html lang='en'>\n"
+         "<head>\n"
+         "\t<link href='https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap' rel='stylesheet'>\n"
+         "\t<link rel='stylesheet' type='text/css' href='../style.css'>\n"
+         "\t<link rel='shortcut icon' href='" + conf->shortcut_icon + "' type='image/x-icon'>\n"
+         "\t<link rel='icon' href='" + conf->icon + "' type='image/x-icon'>\n"
+         "\t<meta charset='utf-8'>\n"
+         "\t<meta name='description' content='" + conf->description + "'>\n"
+         "\t<meta name='viewport' content='width=device-width, initial-scale=1.0'>\n"
+         "\t<meta name='twitter:card' content='summary'>\n"
+         "\t<meta name='twitter:site' content='" + conf->name + "'>\n"
+         "\t<meta name='twitter:title' content='" + conf->name + "'>\n"
+         "\t<meta name='twitter:description' content='" + conf->description + "'>\n"
+         "\t<meta name='twitter:creator' content='@" + conf->twitter_creator + "'>\n"
+         "\t<meta name='twitter:image' content='" + conf->icon + "'>\n"
+         "\t<meta property='og:title' content='" + conf->name + "'>\n"
+         "\t<meta property='og:site_name' content='" + conf->name + "'>\n"
+         "\t<title> " + conf->name + " - " + text + "</title>\n"
+         "\t<style>\n"
+         "\t\thtml { scroll-behavior: smooth; }\n" 
+         "\t</style>\n"
+         "</head>\n"
+         "<body class='" + text + "'>\n";
 }
 string html_header = "";
 string html_footer = "";
@@ -291,12 +301,8 @@ Category **createCategories(int *categoryCount, string filename, string path) {
   string line;
   int lineNo = 0;
 
-  // --- FIX for uninitialized variable warning: Initialize currentCategory immediately ---
-  // Category for separate pages is always created first
+  // --- FIX: Initialize currentCategory immediately ---
   Category *seperateCategory = createCategory("SeperatePages", 0);
-  
-  // Initialize currentCategory to the safe, default category pointer.
-  // This ensures it is never an uninitialized pointer when checked later (e.g., hashcount == 2).
   Category *currentCategory = seperateCategory;
   // --- END FIX ---
 
@@ -333,11 +339,14 @@ Category **createCategories(int *categoryCount, string filename, string path) {
           i++;
         }
         
-        // Remove trailing spaces before extracting heading text
+        // Remove leading/trailing spaces before extracting heading text
         size_t start = trimmed_line.find_first_not_of(" \t", i);
         size_t end = trimmed_line.find_last_not_of(" \t");
         string heading_text = (start == string::npos) ? "" : trimmed_line.substr(start, end - start + 1);
         
+        // --- FIX: Trim trailing whitespace/newlines from heading_text ---
+        heading_text = trim_trailing(heading_text);
+
         // --- TOC GENERATION LOGIC ---
         // Collect ALL H1, H2, H3 for the site-wide TOC
         if (hashcount >= 1 && hashcount <= 3) {
@@ -413,21 +422,21 @@ Category **createCategories(int *categoryCount, string filename, string path) {
 
           // If not in a ul
           if (uList == false) {
-            currentPartDesc += "<ul>";
+            currentPartDesc += "<ul>\n"; 
             uList = true;
           }
 
-          currentPartDesc += "<li>";
+          currentPartDesc += "\t<li>"; 
           currentPartDesc += li_content;
-          currentPartDesc += "</li>";
+          currentPartDesc += "</li>\n"; 
 
         } else { // If list doesn't continue
           if (uList == true) {
             uList = false;
-            currentPartDesc += "</ul>";
+            currentPartDesc += "</ul>\n"; 
           }
           // This assumes the content has already been processed by parseLinks
-          currentPartDesc += "<p>" + line + "</p>";
+          currentPartDesc += "<p>" + line + "</p>\n"; 
         }
 
         // For <ul> continuing to next part of the page, Every 'part name' has
@@ -452,7 +461,7 @@ void buildHome(Category *categories[], int categories_length, string path) {
   htmlHome << html_head("Home");
   htmlHome << html_header;
   
-  // --- TOC SIDEBAR FOR HOME PAGE ---
+  // --- TOC SIDEBAR FOR HOME PAGE (Fixed formatting) ---
   htmlHome << "<div id='sidebar'>\n";
   htmlHome << "    <h2>Table of Contents</h2>\n";
   htmlHome << "    <ul>\n";
@@ -460,7 +469,6 @@ void buildHome(Category *categories[], int categories_length, string path) {
   for (const auto& entry : all_toc_entries) {
       string li_class = "level-" + to_string(entry.level);
       htmlHome << "        <li class=\"" << li_class << "\">";
-      // Links jump to the ID on the current home page
       htmlHome << "<a href=\"#" << entry.id << "\">" << entry.text << "</a>";
       htmlHome << "</li>\n";
   }
@@ -468,31 +476,30 @@ void buildHome(Category *categories[], int categories_length, string path) {
   htmlHome << "</div>\n";
   // --- END TOC SIDEBAR ---
   
-  // --- MAIN CONTENT CONTAINER ---
-  htmlHome << "<div id='content'>";
-  htmlHome << "<main class='home'>";
+  // --- MAIN CONTENT CONTAINER (Fixed formatting) ---
+  htmlHome << "<div id='content'>\n";
+  htmlHome << "    <main class='home'>\n";
 
   for (int i = 1; i <= categories_length; i++) {
     Category *category = categories[i];
     
-    // Add ID to H2 for linking from TOC
     string category_id = toLowerCase(category->name);
-    htmlHome << "<h2 id='" << category_id << "'>" << category->name << "</h2>";
+    htmlHome << "        <h2 id='" << category_id << "'>" << category->name << "</h2>\n";
     
-    htmlHome << "<ul>";
+    htmlHome << "        <ul>\n";
     for (int j = 0; j < category->pageCount; j++) {
       Page *page = category->pages[j];
       string page_name = page->title;
       string page_index = toLowerCase(page_name);
-      htmlHome << "<li><a href='" << page_index << ".html'>" << page_name
-               << "</a></li>";
+      htmlHome << "            <li><a href='" << page_index << ".html'>" << page_name
+               << "</a></li>\n";
     }
 
-    htmlHome << "</ul>";
+    htmlHome << "        </ul>\n";
   }
-  htmlHome << "<hr/>";
-  htmlHome << "</main>";
-  htmlHome << "</div>"; // Close #content
+  htmlHome << "        <hr/>\n";
+  htmlHome << "    </main>\n";
+  htmlHome << "</div>\n"; // Close #content
   htmlHome << html_footer;
   htmlHome.close();
 }
@@ -500,20 +507,19 @@ void buildHome(Category *categories[], int categories_length, string path) {
 // Helper to generate the main page content with proper IDs
 void generate_page_content(ofstream& htmlPage, Page *page) {
   
-  // H1 already has ID from TOC parsing (H1 is the page title)
   string page_id = toLowerCase(page->title);
-  htmlPage << "<h1 id='" << page_id << "'>" << page->title << "</h1>";
+  htmlPage << "        <h1 id='" << page_id << "'>" << page->title << "</h1>\n";
 
   // Existing jump list (optional, as we have the fixed sidebar)
   if (page->partsCount >= 3) {
-    htmlPage << "<ul class='jump'>";
+    htmlPage << "        <ul class='jump'>\n";
     for (int i = 0; i < page->partsCount; i++) {
       string part_name = page->partName[i];
       string part_index = toLowerCase(part_name);
-      htmlPage << "<li><a href='#" << part_index << "'>" << part_name
-               << "</a></li>";
+      htmlPage << "            <li><a href='#" << part_index << "'>" << part_name
+               << "</a></li>\n";
     }
-    htmlPage << "</ul>";
+    htmlPage << "        </ul>\n";
   }
 
   for (int i = 0; i < page->partsCount; i++) {
@@ -523,12 +529,12 @@ void generate_page_content(ofstream& htmlPage, Page *page) {
     
     // H3 headings (which were H3 in the MD)
     // Extra </ul> to keep a check on overflowing <ul>
-    htmlPage << "</ul><h3 id='" << part_index << "'>" << part_name 
-             << "</h3>"; 
-    htmlPage << part_desc;
+    htmlPage << "        </ul>\n<h3 id='" << part_index << "'>" << part_name 
+             << "</h3>\n"; 
+    htmlPage << part_desc; 
   }
 
-  htmlPage << "<hr/>";
+  htmlPage << "        <hr/>\n";
 }
 
 void buildPage(Page *page, string path) {
@@ -539,7 +545,7 @@ void buildPage(Page *page, string path) {
   htmlPage << html_head(page->title);
   htmlPage << html_header;
   
-  // --- TOC SIDEBAR GENERATION ---
+  // --- TOC SIDEBAR GENERATION (Fixed formatting) ---
   htmlPage << "<div id='sidebar'>\n";
   htmlPage << "    <h2>Table of Contents</h2>\n";
   htmlPage << "    <ul>\n";
@@ -547,7 +553,6 @@ void buildPage(Page *page, string path) {
   for (const auto& entry : all_toc_entries) {
       string li_class = "level-" + to_string(entry.level);
       htmlPage << "        <li class=\"" << li_class << "\">";
-      // Links jump to the ID on the current page
       htmlPage << "<a href=\"#" << entry.id << "\">" << entry.text << "</a>";
       htmlPage << "</li>\n";
   }
@@ -555,14 +560,14 @@ void buildPage(Page *page, string path) {
   htmlPage << "</div>\n";
   // --- END TOC SIDEBAR ---
   
-  // --- MAIN CONTENT CONTAINER ---
-  htmlPage << "<div id='content'>";
-  htmlPage << "<main class='page'>";
+  // --- MAIN CONTENT CONTAINER (Fixed formatting) ---
+  htmlPage << "<div id='content'>\n";
+  htmlPage << "    <main class='page'>\n";
   
   generate_page_content(htmlPage, page); // Call new helper
   
-  htmlPage << "</main>";
-  htmlPage << "</div>"; // Close #content
+  htmlPage << "    </main>\n";
+  htmlPage << "</div>\n"; // Close #content
   
   htmlPage << html_footer;
   htmlPage.close();
@@ -574,16 +579,13 @@ void createSite(string filename, string path) {
   
   // Initialize config
   conf = configParser();
-  html_header = "<header>" + conf->header + "</header>";
-  // Adjusted footer to close the <body> and <html> tags properly
-  html_footer = "<footer><p>" + conf->footer + "</p></footer></body></html>";
+  html_header = "<header>" + conf->header + "</header>\n";
+  // Adjusted footer to close the <body> and <html> tags properly, with newline
+  html_footer = "<footer><p>" + conf->footer + "</p></footer>\n</body>\n</html>\n";
   
   // 1. First Pass: Create categories/pages AND collect all TOC entries
   cats = createCategories(&categoryCount, filename, path);
   cout << "Categories found: " << categoryCount << endl;
-
-  // Debug categories
-  // printContent(cats,categoryCount);
 
   // 2. Second Pass: Build all pages using the collected TOC data
   buildHome(cats, categoryCount, path);
