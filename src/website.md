@@ -4,7 +4,6 @@
 Hey there, I am Sakshi.<br>
 In the 25 years of my current existence, one thing that has stayed true to me is working with challenging problems. Be it my undergrad, the oil and gas sector or the finance sector, or my grad school. Yep! After 3 years of spending my time in the industry I decided to return back to grad school to learn more about computers, maths and LIFE! 
 Growing up I travelled across India and now I study in the beautiful town of Stony Brook near New York.Born to parents who adored literature, politics and economics in their own rights.I embrace my identity as a proud nationalist Indian coming from humble Bihar. This is my digital garden on second brain where I aim to make Computer Science fun and maybe informative.
-<p> <img class='thumbnail' style='width:200px' src='https://i.ibb.co/86mkYtd/20190413-063202.jpg'> </p><p>
 </p>
 
 ### Professional Life 
